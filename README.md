@@ -17,3 +17,4 @@ borrarlo?
 3. En este caso, _name = "prestamo.prestamo" crea un modelo nuevo y su propia tabla en la base de datos. El _inherit = ["mail.thread"] hereda las funciones y los campos de mail.thread para agregar el chatter al modelo nuevo.  
 4. tracking=True registra de manera automatica en el chatter cada vez que el campo state cambia de valor, mostrando las acciones que hizo el usuario, la hora y la fecha, el estado anterior y el nuevo estado.  
 5. "prestamo.linea" es el modelo destino (hijo) donde están los registros relacionados. "prestamo_id" es el campo Many2one dentro de prestamo.linea que apunta de vuelta hacia este préstamo (la llave foranea que los conecta).  
+6. Pasa que todas las lineas (prestamo.linea) asociadas a ese prestamo se borran de manera automatica en cascada para no dejar huerfanos a los registros. Lo define el parametro ondelete="cascade" en el campo prestamo_id dentro de prestamo_linea.py
