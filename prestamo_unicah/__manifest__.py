@@ -8,7 +8,8 @@
     "data": [ 
         "security/ir.access.csv", 
         "data/prestamo_equipo_data.xml", 
-        "views/prestamo_equipo_views.xml", 
+        "views/prestamo_equipo_views.xml",
+        "views/prestamo_views.xml",
     ], 
     "application": True, 
     "license": "LGPL-3", 
